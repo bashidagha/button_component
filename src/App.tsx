@@ -1,6 +1,13 @@
+import styles from "./app.module.scss";
 
 function App() {
-  return <></>;
+  return (
+    <main>
+      <div className={styles.wrapper}>
+        
+      </div>
+    </main>
+  );
 }
 
 export default App;
