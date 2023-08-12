@@ -28,6 +28,14 @@
     ul {
       flex: 1 1;
       text-align: center;
+
+      .support {
+        cursor: pointer;
+      }
+      .active {
+        color: #090F31;
+        font-weight: 700;
+      }
       li {
         font-size: 1.4rem;
         color: #9e9e9e;

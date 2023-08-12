@@ -1,9 +1,36 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as var;
 
-.btn{
+.btn {
   font-size: 1.4rem;
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   line-height: 20.27px;
   cursor: pointer;
+  color: #3f3f3f;
+  background-color: #e0e0e0;
+
+  &:hover,
+  &:focus {
+    background-color: #aeaeae;
+  }
+}
+
+.btn_outline {
+  color: #3d5afe;
+  background-color: var.$color-white;
+  border: 1px solid #3d5afe;
+  &:hover,
+  &:focus {
+    background-color: #2962ff1a;
+  }
+}
+
+
+.btn_text {
+  color: #3d5afe;
+  background-color: var.$color-white;
+  &:hover,
+  &:focus {
+    background-color: #2962ff1a;
+  }
 }

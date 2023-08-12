@@ -8,8 +8,8 @@ const Buttons = () => {
       <div className={styles.wrapper}>
         <h1>Buttons</h1>
         <ButtonView title="<Button />" />
-        <ButtonView title="<Button variant=”outline” />" />
-        <ButtonView title="<Button variant=”text” />" />
+        <ButtonView title="<Button variant=”outline” />" variant="outline"/>
+        <ButtonView title="<Button variant=”text” />" variant="text"/>
         <ButtonView title="<Button disableShadow />" />
         <ButtonView title="<Button disabled />" />
         <ButtonView title="<Button variant=”text” disabled />" />
