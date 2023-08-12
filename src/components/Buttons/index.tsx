@@ -1,4 +1,3 @@
-import React from "react";
 import ButtonView from "../ButtonView";
 import styles from "./index.module.scss";
 
