@@ -2,7 +2,6 @@
 
 .container {
   background-color: #fafbfd;
-  display: inline-block;
   height: 100%;
   max-width: 24rem;
   width: 100%;
@@ -18,7 +17,7 @@
       span {
         font-size: 1.3rem;
         color: #090f31;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 700;
         line-height: 2rem;
         &:nth-child(1) {
