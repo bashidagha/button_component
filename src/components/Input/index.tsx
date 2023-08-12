@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useId } from "react";
+import { useEffect, useId } from "react";
 import Icon from "../Icon";
 import styles from "./index.module.scss";
 
@@ -41,6 +41,10 @@ const Input = ({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (setInput) setInput(e.target.value);
   };
+
+  useEffect(() => {
+    if (setInput && value) setInput(value);
+  }, []);
 
   return (
     <div
