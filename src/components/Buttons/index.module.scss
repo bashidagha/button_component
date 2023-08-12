@@ -2,13 +2,9 @@
 
 .container {
   background-color: var.$color-white;
-  display: inline-block;
-  height: 100%;
-  max-width: 24rem;
-  width: 100%;
   .wrapper {
     height: 100%;
-    padding: 5rem  0 0 8rem;
+    padding: 5rem 0 0 8rem;
     gap: 12rem;
     h1 {
       font-family: "Poppins", sans-serif;
@@ -18,9 +14,11 @@
       margin-bottom: 2.8rem;
     }
 
-    .inline{
+    .row {
       display: flex;
       gap: 5rem;
+      flex-wrap: wrap;
+      margin-bottom: 4.5rem;
     }
   }
 }

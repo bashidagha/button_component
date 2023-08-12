@@ -30,14 +30,7 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
   }
 }
 
-.btn_variant_text {
-  color: #3d5afe;
-  background-color: var.$color-white;
-  &:hover,
-  &:focus {
-    background-color: #2962ff1a;
-  }
-}
+
 
 .btn_no_shadow {
   box-shadow: none;
@@ -50,13 +43,22 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
 }
 
 .btn_disable {
-  color: #9e9e9e;
+  color: #9e9e9e !important;
   cursor: auto;
   box-shadow: none;
   background-color: #e0e0e0;
   &:hover,
   &:focus {
     background-color: #e0e0e0;
+  }
+}
+
+.btn_variant_text {
+  color: #3d5afe;
+  background-color: var.$color-white;
+  &:hover,
+  &:focus {
+    background-color: #2962ff1a;
   }
 }
 
