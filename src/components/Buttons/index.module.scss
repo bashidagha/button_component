@@ -20,5 +20,16 @@
       flex-wrap: wrap;
       margin-bottom: 4.5rem;
     }
+
+    .copyright{
+      margin-bottom: 2.5rem;
+      color: #A9A9A9;
+      font-size: 1.4rem;
+      a{
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
   }
 }

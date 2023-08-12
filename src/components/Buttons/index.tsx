@@ -48,6 +48,11 @@ const Buttons = () => {
           <ButtonView title="<Button color=”primary” />" color="primary" />
           <ButtonView title="<Button color=”secondary” />" color="secondary" />
         </div>
+        <div className={styles.copyright}>
+          created by{" "}
+          <a href="https://devchallenges.io/portfolio/bashidagha">bashidagha</a> -
+          devChallenges.io
+        </div>
       </div>
     </div>
   );
