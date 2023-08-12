@@ -5,7 +5,7 @@ import Inputs from "./components/Inputs";
 import SideBar from "./components/SideBar";
 
 function App() {
-  const [currentRoot, setCurrentRoot] = useState("buttons");
+  const [currentRoot, setCurrentRoot] = useState("inputs");
 
   return (
     <main className={styles.container}>
