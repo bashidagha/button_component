@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+
+.container {
+  background-color: #fafbfd;
+  display: inline-block;
+  height: 100%;
+  max-width: 24rem;
+  width: 100%;
+  .wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 12rem;
+
+    .logo {
+      text-align: center;
+      padding-top: 4rem;
+      span {
+        font-size: 1.3rem;
+        color: #090f31;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        line-height: 2rem;
+        &:nth-child(1) {
+          color: #f7542e;
+        }
+      }
+    }
+    ul {
+      flex: 1 1;
+      text-align: center;
+      li {
+        font-size: 1.4rem;
+        color: #9e9e9e;
+        line-height: 2rem;
+        text-transform: capitalize;
+      }
+      li + li {
+        margin-top: 3rem;
+      }
+    }
+  }
+}

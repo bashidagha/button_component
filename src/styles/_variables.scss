@@ -1,53 +1,5 @@
-$primary-colors: (
-  "main": #6db85d,
-  "light": #e8f9e0,
-  "contrast-text": #fff,
-);
-
-$background-white: #ffffff;
-$background-gray: #f5f5f5;
-$background-gray300: #333333;
-$background-gray100: #1a1a1a;
-$background-gray900: #ededed;
-$color-gray700: #707070;
-$border-color: #dfe6f1;
-$header-height: 80px;
-$container-width: 980px;
-
-$font-sizes: (
-  "h1": 1.5rem,
-  "h2": 1.125rem,
-  "h3": 1rem,
-  "subtitle1": 1rem,
-  "subtitle2": 0.875rem,
-  "body1": 1rem,
-  "body2": 0.875rem,
-);
-
-$font-weights: (
-  "h1": 800,
-  "h2": 700,
-  "h3": 700,
-  "subtitle1": 500,
-  "subtitle2": 500,
-  "body1": 400,
-  "body2": 400,
-);
-
-$line-heights: (
-  "h1": 1.167,
-  "h2": 1.167,
-  "h3": 1.167,
-  "subtitle1": 1.75,
-  "subtitle2": 1.57,
-  "body1": 1.5,
-  "body2": 1.5,
-);
-
-$breakpoints: (
-  "xs": 0px,
-  "sm": 600px,
-  "md": 960px,
-  "lg": 1100px,
-  "xl": 1920px,
-);
+$color-gray: #333333;
+$color-white: #ffffff;
+$color-primary: #2962ff;
+$color-secondary: #455a64;
+$color-default: #3d5afe;
