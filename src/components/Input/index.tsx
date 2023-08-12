@@ -1,7 +1,7 @@
-import { useEffect, useId } from "react";
+import clsx from "clsx";
+import { useId } from "react";
 import Icon from "../Icon";
 import styles from "./index.module.scss";
-import clsx from "clsx";
 
 interface IPorps {
   placeholder?: string;
@@ -42,10 +42,6 @@ const Input = ({
     if (setInput) setInput(e.target.value);
   };
 
-  useEffect(() => {
-    if (value && setInput) setInput(value);
-  }, []);
-
   return (
     <div
       className={`${styles.container} ${clsx(
@@ -61,7 +57,7 @@ const Input = ({
       <label htmlFor={messageId}>{label ? label : "Label"}</label>
       <div className={styles.input}>
         {startIcon && (
-          <span>
+          <span className={styles.inputStartIcon}>
             <Icon name={startIcon} />
           </span>
         )}
@@ -71,6 +67,7 @@ const Input = ({
         ) : (
           <input
             value={input}
+            defaultValue={value}
             onChange={handleChange}
             disabled={disabled}
             id={messageId}
@@ -78,11 +75,12 @@ const Input = ({
           />
         )}
         {endIcon && (
-          <span>
+          <span className={styles.inputEndIcon}>
             <Icon name={endIcon} />
           </span>
         )}
       </div>
+      {helperText && <p className={styles.helper_text}>{helperText}</p>}
     </div>
   );
 };

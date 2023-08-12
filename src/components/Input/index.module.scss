@@ -6,6 +6,7 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
 .container {
   .input {
     padding-top: 4px;
+    position: relative;
     input {
       padding: 1.8rem 1.2rem;
       border: 1px solid #828282;
@@ -19,6 +20,52 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
       &:focus {
         border: 1px solid #2962ff;
       }
+    }
+
+    textarea {
+      border: 1px solid #828282;
+      border-radius: 8px;
+      padding: 1.8rem 1.2rem;
+      font-size: 1.4rem;
+      outline: none;
+      &:hover {
+        border: 1px solid #333333;
+      }
+      &:focus {
+        border: 1px solid #2962ff;
+      }
+    }
+
+    .inputStartIcon {
+      position: absolute;
+      top: 2.5rem;
+      left: 1.5rem;
+    }
+    .inputEndIcon {
+      position: absolute;
+      top: 2.5rem;
+      right: 1.5rem;
+    }
+  }
+  .helper_text {
+    font-size: 1rem;
+    margin-top: 4px;
+    color: #828282;
+  }
+}
+
+.input_start_icon {
+  .input {
+    input {
+      padding-left: 4rem;
+    }
+  }
+}
+
+.input_end_icon {
+  .input {
+    input {
+      padding-right: 4rem;
     }
   }
 }
@@ -34,6 +81,10 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
     }
   }
 
+  .helper_text {
+    color: #d32f2f;
+  }
+
   .input {
     input {
       border: 1px solid #d32f2f;
@@ -45,20 +96,40 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
   }
 }
 
-.input_disable{
-  .input{
-    input{
-      background-color: #F2F2F2;
-      &:hover{
+.input_disable {
+  .input {
+    input {
+      background-color: #f2f2f2;
+      &:hover {
         border: 1px solid #828282;
       }
     }
   }
 }
 
-@each $i in $size {
-  .btn_size_#{nth($i, 2)} {
-    background-color: #2962ff;
-    color: white;
+.input_fullWidth {
+  .input {
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.input_size_sm {
+  .input {
+    input {
+      padding: 1rem 1.2rem;
+    }
+
+    .inputStartIcon {
+      position: absolute;
+      top: 2rem;
+      left: 1rem;
+    }
+    .inputEndIcon {
+      position: absolute;
+      top: 2rem;
+      right: 1rem;
+    }
   }
 }
