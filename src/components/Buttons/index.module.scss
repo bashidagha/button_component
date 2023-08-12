@@ -17,5 +17,10 @@
       color: var.$color-gray2;
       margin-bottom: 2.8rem;
     }
+
+    .inline{
+      display: flex;
+      gap: 5rem;
+    }
   }
 }

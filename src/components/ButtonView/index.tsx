@@ -7,6 +7,7 @@ interface IPorps {
   title: string;
   variant?: string;
   disableShadow?: boolean;
+  disabled?: boolean;
   startIcon?: string;
   endIcon?: string;
   size?: string;

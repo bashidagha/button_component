@@ -1,13 +1,18 @@
 @use "../../styles/variables" as var;
 
+$size: "small" "sm", "medium" "md", "large" "lg";
+$color: "default" "default", "primary" "primary", "secondary" "secondary";
+
 .btn {
   font-size: 1.4rem;
+  display: flex;
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   line-height: 20.27px;
   cursor: pointer;
   color: #3f3f3f;
   background-color: #e0e0e0;
+  box-shadow: 0px 2px 3px 0px #33333333;
 
   &:hover,
   &:focus {
@@ -15,7 +20,7 @@
   }
 }
 
-.btn_outline {
+.btn_variant_outline {
   color: #3d5afe;
   background-color: var.$color-white;
   border: 1px solid #3d5afe;
@@ -25,12 +30,99 @@
   }
 }
 
-
-.btn_text {
+.btn_variant_text {
   color: #3d5afe;
   background-color: var.$color-white;
   &:hover,
   &:focus {
     background-color: #2962ff1a;
+  }
+}
+
+.btn_no_shadow {
+  box-shadow: none;
+  color: white;
+  background-color: #3d5afe;
+  &:hover,
+  &:focus {
+    background-color: #3d5afe;
+  }
+}
+
+.btn_disable {
+  color: #9e9e9e;
+  cursor: auto;
+  box-shadow: none;
+  background-color: #e0e0e0;
+  &:hover,
+  &:focus {
+    background-color: #e0e0e0;
+  }
+}
+
+@each $i in $size {
+  .btn_size_#{nth($i, 2)} {
+    background-color: #2962ff;
+    color: white;
+  }
+}
+
+.btn_size_sm {
+  padding: 0.6rem 1.2rem;
+  &:hover,
+  &:focus {
+    background-color: #0039cb;
+  }
+}
+
+.btn_size_md {
+  padding: 0.6rem 1.2rem;
+  &:hover,
+  &:focus {
+    background-color: #0039cb;
+  }
+}
+
+.btn_size_lg {
+  padding: 1.1rem 2.2rem;
+  &:hover,
+  &:focus {
+    background-color: #0039cb;
+  }
+}
+
+.btn_color_primary {
+  background-color: #2962ff;
+  color: white;
+
+  &:hover,
+  &:focus {
+    background-color: #0039cb;
+  }
+}
+.btn_color_secondary {
+  background-color: #455a64;
+  color: white;
+
+  &:hover,
+  &:focus {
+    background-color: #1c313a;
+  }
+}
+
+.btn_start_icon,
+.btn_end_icon {
+  background-color: #2962ff;
+  color: white;
+  align-items: center;
+  gap: 8px;
+
+  span{
+    display: inline-flex;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #0039cb;
   }
 }
