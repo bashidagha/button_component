@@ -15,6 +15,8 @@ interface IPorps {
   size?: string;
   helperText?: string;
   label?: string;
+  input?: string;
+  setInput?: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const InputView = (props: IPorps) => {

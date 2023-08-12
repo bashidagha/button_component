@@ -45,6 +45,17 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
   }
 }
 
+.input_disable{
+  .input{
+    input{
+      background-color: #F2F2F2;
+      &:hover{
+        border: 1px solid #828282;
+      }
+    }
+  }
+}
+
 @each $i in $size {
   .btn_size_#{nth($i, 2)} {
     background-color: #2962ff;

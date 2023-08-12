@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useEffect, useId } from "react";
 import Icon from "../Icon";
 import styles from "./index.module.scss";
 import clsx from "clsx";
@@ -16,6 +16,8 @@ interface IPorps {
   size?: string;
   helperText?: string;
   label?: string;
+  input?: string;
+  setInput?: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Input = ({
@@ -30,9 +32,19 @@ const Input = ({
   value,
   size,
   label,
+  input,
+  setInput,
   helperText,
 }: IPorps) => {
   const messageId = useId();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (setInput) setInput(e.target.value);
+  };
+
+  useEffect(() => {
+    if (value && setInput) setInput(value);
+  }, []);
 
   return (
     <div
@@ -58,7 +70,9 @@ const Input = ({
           <textarea value={value} rows={row ? row : 4} />
         ) : (
           <input
-            value={value}
+            value={input}
+            onChange={handleChange}
+            disabled={disabled}
             id={messageId}
             placeholder={placeholder ? placeholder : "Placeholder "}
           />
