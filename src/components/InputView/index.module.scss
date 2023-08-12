@@ -1,0 +1,10 @@
+@use "../../styles/variables" as var;
+
+.container {
+  p {
+    font-size: 1.2rem;
+    color: var.$color-gray;
+    margin-bottom: 1.2rem;
+    width: max-content;
+  }
+}

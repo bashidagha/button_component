@@ -1,0 +1,31 @@
+@use "../../styles/variables" as var;
+
+$size: "small" "sm", "medium" "md", "large" "lg";
+$color: "default" "default", "primary" "primary", "secondary" "secondary";
+
+.container {
+  .input {
+    padding-top: 4px;
+    input {
+      padding: 1.8rem 1.2rem;
+      border: 1px solid #828282;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      display: block;
+      outline: none;
+      &:hover{
+        border: 1px solid #333333;
+      }
+      &:focus{
+        border: 1px solid #2962FF;
+      }
+    }
+  }
+}
+
+@each $i in $size {
+  .btn_size_#{nth($i, 2)} {
+    background-color: #2962ff;
+    color: white;
+  }
+}
