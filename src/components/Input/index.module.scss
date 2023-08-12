@@ -13,11 +13,33 @@ $color: "default" "default", "primary" "primary", "secondary" "secondary";
       font-size: 1.4rem;
       display: block;
       outline: none;
-      &:hover{
+      &:hover {
         border: 1px solid #333333;
       }
-      &:focus{
-        border: 1px solid #2962FF;
+      &:focus {
+        border: 1px solid #2962ff;
+      }
+    }
+  }
+}
+
+.input_error {
+  label {
+    color: #d32f2f;
+  }
+
+  &:hover {
+    label {
+      color: unset;
+    }
+  }
+
+  .input {
+    input {
+      border: 1px solid #d32f2f;
+
+      &:focus {
+        border: 1px solid #333333;
       }
     }
   }

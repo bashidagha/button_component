@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Icon from "../Icon";
 import styles from "./index.module.scss";
 
@@ -24,15 +25,15 @@ const Button = ({
 }: IPorps) => {
   return (
     <button
-      className={`${styles.btn} ${
-        variant && styles[`btn_variant_${variant}`]
-      } ${disableShadow && styles[`btn_no_shadow`]} ${
-        disabled && styles[`btn_disable`]
-      } ${size && styles[`btn_size_${size}`]} ${
-        color && styles[`btn_color_${color}`]
-      } ${startIcon && styles[`btn_start_icon`]} ${
+      className={`${styles.btn} ${clsx(
+        variant && styles[`btn_variant_${variant}`],
+        disableShadow && styles[`btn_no_shadow`],
+        disabled && styles[`btn_disable`],
+        size && styles[`btn_size_${size}`],
+        color && styles[`btn_color_${color}`],
+        startIcon && styles[`btn_start_icon`],
         endIcon && styles[`btn_end_icon`]
-      }`}
+      )}`}
     >
       {startIcon && (
         <span>

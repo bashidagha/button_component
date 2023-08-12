@@ -8,6 +8,7 @@ const Inputs = () => {
         <h1>Inputs</h1>
         <div className={styles.row}>
           <InputView title="<Input />" />
+          <InputView title="<Input error />" error/>
         </div>
 
         <div className={styles.copyright}>
